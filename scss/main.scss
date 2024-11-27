@@ -1,0 +1,223 @@
+$primary-color: #FFEFE7;
+$secondary-color: #FFDAC6;
+$tertiary-color: #BABD8D;
+$primary-text-color: #7C6A0A;
+$quaternary-color: #FA9500;
+$font-stack:'IBM Plex Sans', sans-serif;
+
+@mixin flexCenter($direction, $content, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+@mixin buttonStyle {
+    button {
+        background: none;
+        border: none;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $primary-color;
+    font-family: $font-stack;
+    margin: auto;
+}
+
+nav {
+    height: 100px;
+    max-width: 1280px;
+    margin: auto;
+    @include flexCenter(row, space-between, center);
+    color: $primary-text-color;
+    p {
+        font-size: 1.5em;
+        padding-left: 30px;
+        font-weight: 700;
+    }
+    .icons {
+        gap: 15px;
+        padding-right: 30px;
+        @include buttonStyle();
+    }
+}
+.title {
+    color: $primary-text-color;
+    font-size: 2em;
+    font-weight: 700;
+}
+.main-section {
+    max-width: 1280px;
+    margin: auto;
+}
+article {
+    color: $primary-text-color;
+    width: auto;
+    padding: 0px 30px;
+    row-gap: 15px;
+    .image-container {
+        width: 50%;
+        img {
+            width: auto;
+            height: 70vh;
+            border-radius: 20px;
+        }
+    }
+    p {
+        width: 90%;
+        font-weight: 500;
+    }
+    @include buttonStyle;
+    button {
+        background-color: $quaternary-color;
+        border-radius: 35px;
+        color: #fff;
+        font-size: 1em;
+        font-weight: 700;
+        width: 50%;
+        height: 50px;
+    }
+}
+.info-container {
+    @include flexCenter(row, space-between, center);
+    .info {
+        @include flexCenter(column, flex-start, start);
+        gap: 30px;
+    }
+}
+section {
+    width: 100%;
+    padding: 60px 30px;
+    .cards-container{
+        @include flexCenter(row, space-evenly, center );
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 100px;
+    }
+    .health-care{
+        h2 {
+            font-weight: 300;
+            padding-bottom: 60px;
+        }
+        .product-card {
+            width: 230px;
+            height: auto;
+            background: $secondary-color;
+            color: $primary-text-color;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+            .icon {
+                text-align: end;
+                padding-bottom: 15px;
+                img {
+                    width: 26px;
+                }
+            }
+            .product-image{ 
+                width: 100%;
+                height: auto;
+                text-align: center;
+                img{
+                    width: 200px;
+                    border-radius: 4px;
+                    object-fit: cover;
+                }
+            }
+            p {
+                font-size: .8rem;
+            }
+        }
+        margin-bottom: 120px
+    }
+    .furniture {
+        @extend .health-care;
+        .product-card {
+            background-color: $tertiary-color;
+            color: #fff;
+        }
+    }
+}
+
+.about-us {
+    @extend .health-care;
+    h2 {
+        padding-bottom: 60px;
+    }
+    .about-us-detail {
+        @include flexCenter(row, space-evenly, center);
+        color: #E86424;
+        text-align: center;
+        font-size: 1.3em;
+        font-weight: 500;
+        gap: 40px;
+        margin: 0px 100px;
+        padding-bottom: 60px;
+        .earth-container {
+            width: 50%;
+            .earth {
+                display: flex;
+                gap: 40px;
+                img {
+                    object-fit: contain;
+                }
+            }
+        }
+        .ecology-container {
+                @extend .earth-container;
+                .innovation {
+                    @extend .earth;
+                }
+
+            
+            //@extend .earth-container;
+
+        }
+    }
+}
+
+.gallery {
+    padding-bottom: 60px;
+    .images-container {
+        @include flexCenter(row, space-between, center );
+        img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+            &:hover {
+                transform: scale(1.1);
+                transition: transform 0.3s ease-in-out;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.location {
+    color: #E86424;
+    .map-container {
+        @include flexCenter(row, center, center);
+        overflow: hidden;
+    }
+    h3, p {
+        margin-bottom: 0;
+    }
+}
+footer {
+    background-color: $quaternary-color;
+    color: #fff;
+    width: 100%;
+    .footer-container {
+        padding: 40px 0px;
+        max-width: 1280px;
+        margin: auto;
+        .social-media {
+            @include flexCenter(row, center , center);
+            gap: 40px;
+        }
+    }
+}

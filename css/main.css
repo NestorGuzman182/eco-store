@@ -1,0 +1,224 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFEFE7;
+  font-family: "IBM Plex Sans", sans-serif;
+  margin: auto;
+}
+
+nav {
+  height: 100px;
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #7C6A0A;
+}
+nav p {
+  font-size: 1.5em;
+  padding-left: 30px;
+  font-weight: 700;
+}
+nav .icons {
+  gap: 15px;
+  padding-right: 30px;
+}
+nav .icons button {
+  background: none;
+  border: none;
+}
+
+.title {
+  color: #7C6A0A;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.main-section {
+  max-width: 1280px;
+  margin: auto;
+}
+
+article {
+  color: #7C6A0A;
+  width: auto;
+  padding: 0px 30px;
+  row-gap: 15px;
+}
+article .image-container {
+  width: 50%;
+}
+article .image-container img {
+  width: auto;
+  height: 70vh;
+  border-radius: 20px;
+}
+article p {
+  width: 90%;
+  font-weight: 500;
+}
+article button {
+  background: none;
+  border: none;
+}
+article button {
+  background-color: #FA9500;
+  border-radius: 35px;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 700;
+  width: 50%;
+  height: 50px;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.info-container .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 30px;
+}
+
+section {
+  width: 100%;
+  padding: 60px 30px;
+}
+section .cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+section .health-care, section .about-us, section .furniture {
+  margin-bottom: 120px;
+}
+section .health-care h2, section .about-us h2, section .furniture h2 {
+  font-weight: 300;
+  padding-bottom: 60px;
+}
+section .health-care .product-card, section .about-us .product-card, section .furniture .product-card {
+  width: 230px;
+  height: auto;
+  background: #FFDAC6;
+  color: #7C6A0A;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+}
+section .health-care .product-card .icon, section .about-us .product-card .icon, section .furniture .product-card .icon {
+  text-align: end;
+  padding-bottom: 15px;
+}
+section .health-care .product-card .icon img, section .about-us .product-card .icon img, section .furniture .product-card .icon img {
+  width: 26px;
+}
+section .health-care .product-card .product-image, section .about-us .product-card .product-image, section .furniture .product-card .product-image {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+section .health-care .product-card .product-image img, section .about-us .product-card .product-image img, section .furniture .product-card .product-image img {
+  width: 200px;
+  border-radius: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section .health-care .product-card p, section .about-us .product-card p, section .furniture .product-card p {
+  font-size: 0.8rem;
+}
+section .furniture .product-card {
+  background-color: #BABD8D;
+  color: #fff;
+}
+
+.about-us h2 {
+  padding-bottom: 60px;
+}
+.about-us .about-us-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #E86424;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 500;
+  gap: 40px;
+  margin: 0px 100px;
+  padding-bottom: 60px;
+}
+.about-us .about-us-detail .earth-container, .about-us .about-us-detail .ecology-container {
+  width: 50%;
+}
+.about-us .about-us-detail .earth-container .earth, .about-us .about-us-detail .ecology-container .earth, .about-us .about-us-detail .ecology-container .innovation {
+  display: flex;
+  gap: 40px;
+}
+.about-us .about-us-detail .earth-container .earth img, .about-us .about-us-detail .ecology-container .earth img, .about-us .about-us-detail .ecology-container .innovation img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.gallery {
+  padding-bottom: 60px;
+}
+.gallery .images-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.gallery .images-container img {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+.gallery .images-container img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.location {
+  color: #E86424;
+}
+.location .map-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.location h3, .location p {
+  margin-bottom: 0;
+}
+
+footer {
+  background-color: #FA9500;
+  color: #fff;
+  width: 100%;
+}
+footer .footer-container {
+  padding: 40px 0px;
+  max-width: 1280px;
+  margin: auto;
+}
+footer .footer-container .social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}/*# sourceMappingURL=main.css.map */
